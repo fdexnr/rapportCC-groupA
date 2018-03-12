@@ -1,6 +1,12 @@
-# rapportCC-groupA
+# RapportCC-groupA - VirtualBox Networks
+VirtualBox allows different virtual network options for its VMs, each with its own authorizations and limitations. Depending on the selected network some of the communications between the network elements will be allowed or not.
+There are four main networks:
+1. NAT
+2. Bridge
+3. Internal network
+4. host-only
 
-# Bridge Network with VirtualBox
+## Bridge Network with VirtualBox
 
   # Principle :
 Thank's to a Specific Driver installed on the host PC, VirtualBox is "connected" to a network interface of this host computer (like eth0 of the physic machine). This enables VirtualBox to do two things:
