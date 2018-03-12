@@ -10,16 +10,18 @@ There are four main networks:
 It is also possible to isolate the guest by choosing not to connect it.
 
 # NAT (Network  Address Translation)
-This configuration is the default one. The guest can access the external network but the opposite is not possible. The host can't access the guest services either but it is possible to grant access by adding a complementary separate host-only interface.
-
-  ## NAT service variant:
-In the latest version of VirtualBox it is possible to configure the NAT network so that it can also communicate with other guess, given they are connected to the main guest. The guest stays unaccessible from external network. The VM is then similar to a router.
+This configuration is the default one. It is like creating a private network : the VMs are given a private IP Address which make outsiders unable to access them directly. However, the contrary is possible : the VM sends a packet to a server (as an example). The VirtualBox network Engine will transform the source IP Address and port (replaces by the host's Addresses). When a packet comes, it goes to VirtualBox and it's engine manage to replace the adresses correctly and follows the message to the VM.
 
   ## Principle:
-hhh  
+This configuration is the default one. It is like creating a private network : the VMs are given a private IP Address which make outsiders unable to access them directly. However, the contrary is possible : the VM sends a packet to a server (as an example). The VirtualBox network Engine will transform the source IP Address and port (replaces by the host's Addresses). When a packet comes, it goes to VirtualBox and it's engine manage to replace the adresses correctly and follows the message to the VM.
   
   ## Uses:
-hhh
+If the VMs are destinated to be clients or if the services aren't all meant to be connected to the internet, NAT is a good solution.
+  
+  ##Limits:
+Some protocols are not supported (only UDP and TCP are)
+Can't assign <1024 ports on the host side.
+UDP broadcasting not reliable (VMs go to sleep few seconds after having sent packet so you can't be sure the VM listened the message).
 
 
 # Bridged networking
