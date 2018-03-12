@@ -13,7 +13,7 @@ It is also possible to isolate the guest by choosing not to connect it.
 This configuration is the default one. The guest can access the external network but the opposite is not possible. The host can't access the guest services either but it is possible to grant access by adding a complementary separate host-only interface.
 
   ## NAT service variant:
-In the latest version of VirtualBox
+In the latest version of VirtualBox it is possible to configure the NAT network so that it can also communicate with other guess, given they are connected to the main guest. The guest stays unaccessible from external network. The VM is then similar to a router.
 
 # Bridged networking
 In this mode the guest can access the external network through the host and inversely. Obviously communication between the host and the guest is also possible.
@@ -35,21 +35,26 @@ Globally you can choose whether an Ethernet interface of a Wi-Fi interface. In t
 # Internal networking
 This network only allows communications between selected guests.
 
+  ## Principle:
+The VirtualBox driver will act like a Switch and enables VM-to-VM communication. To attach a VM’s network card to the network : go to the settings, in “Networking”, “internal networking”, select the name of an existing internal network and you’re done. (Each Internal network is defined by its name)
+
+  ## Uses:
+You can do less things than with bridged network but if you’re looking only for VM-to-VM communication, this solution is safer (the host system can’t observe the data transferred).
+
 
 # Host-only networking
 This mode only allows communication between the host and guests.
 
-
-# Global view
-Here is a global view of the different VirtualBox networks
-
-![alt text](https://en.wikipedia.org/wiki/Lenna#/media/File:Lenna.png)
-
-<p>
-  <img src="https://en.wikipedia.org/wiki/Lenna#/media/File:Lenna.png" width="350"/>
-</p>
-
-![myimage-alt-tag](https://en.wikipedia.org/wiki/Lenna#/media/File:Lenna.png)
+  ## Principle:
+It’s a sort of merge of Bridge Network and Internal Network :
+VirtualBox creates on the host a new software interface which appears like any other network interface.
+It creates VM-to-VM communication. The difference with Internal Network is that the host can intercept exchanges and so on watch their communications.  
+  # Uses:
+Imagine you have : 1 databaseVM, 1 VM hosting a website (webVM) and you want to have an overview of the exchanges from your host Machine. You create 2 networks :
+ BridgeNetwork with the webVM
+Host-OnlyNetwork with the dataVM
+People from outside can’t corrupt your database, and you can examine the exchanges from your host computer.
 
   ## Sources
+- https://www.virtualbox.org/manual/ch06.html
 - https://www.thomas-krenn.com/en/wiki/Network_Configuration_in_VirtualBox
