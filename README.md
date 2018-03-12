@@ -10,12 +10,12 @@ There are four main networks:
 It is also possible to isolate the guest by choosing not to connect it.
 
 # NAT (Network  Address Translation)
-This configuration is the default one. It is like creating a private network : the VMs are given a private IP Address which make outsiders unable to access them directly. However, the contrary is possible : the VM sends a packet to a server (as an example). The VirtualBox network Engine will transform the source IP Address and port (replaces by the host's Addresses). When a packet comes, it goes to VirtualBox and it's engine manage to replace the adresses correctly and follows the message to the VM.
 
   ## Principle:
 This configuration is the default one. It is like creating a private network : the VMs are given a private IP Address which make outsiders unable to access them directly. However, the contrary is possible : the VM sends a packet to a server (as an example). The VirtualBox network Engine will transform the source IP Address and port (replaces by the host's Addresses). When a packet comes, it goes to VirtualBox and it's engine manage to replace the adresses correctly and follows the message to the VM.
   
   ## Uses:
+Since machines can’t talk to each other the security is maximized, but as the machine is unreachable by the exterbal network the uses are limited.  
 If the VMs are destinated to be clients or if the services aren't all meant to be connected to the internet, NAT is a good solution.
   
   ## Limits:
@@ -65,7 +65,7 @@ Host-OnlyNetwork with the dataVM
 People from outside can’t corrupt your database, and you can examine the exchanges from your host computer.
 
   # Conclusion : 
-Each problem/situation corresponds a solution : You can use differents kinds of networks to make your services reachable and secured (Internal Networks for VMs supposed to communicate between themselves only, Bridge to expose a VM to the internet, NAT for clientVMs, LocalHost to make host able to see the transfers)
+To each problem/situation corresponds a solution : You can use differents kinds of networks to make your services reachable and secured (Internal Networks for VMs supposed to communicate between themselves only, Bridge to expose a VM to the internet, NAT for clientVMs, LocalHost to make host able to see the transfers)
 
   ## Sources
 - https://www.virtualbox.org/manual/ch06.html
