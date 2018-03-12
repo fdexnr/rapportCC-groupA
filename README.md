@@ -5,7 +5,8 @@ There are four main networks:
 1. NAT
 2. Bridge
 3. Internal network
-4. Host-only
+4. Host-only  
+
 It is also possible to isolate the guest by choosing not to connect it.
 
 # NAT (Network  Address Translation)
@@ -40,7 +41,9 @@ This mode only allows communication between the host and guests.
 
 
 # Global view
-hhh
+Here is a global view of the different VirtualBox networks
+
+![alt text](https://en.wikipedia.org/wiki/Lenna#/media/File:Lenna.png)
 
   ## Sources
-hhh
+- https://www.thomas-krenn.com/en/wiki/Network_Configuration_in_VirtualBox
