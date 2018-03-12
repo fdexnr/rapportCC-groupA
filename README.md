@@ -18,7 +18,7 @@ This configuration is the default one. It is like creating a private network : t
   ## Uses:
 If the VMs are destinated to be clients or if the services aren't all meant to be connected to the internet, NAT is a good solution.
   
-  ##Limits:
+  ## Limits:
 Some protocols are not supported (only UDP and TCP are)
 Can't assign <1024 ports on the host side.
 UDP broadcasting not reliable (VMs go to sleep few seconds after having sent packet so you can't be sure the VM listened the message).
