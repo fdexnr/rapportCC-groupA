@@ -64,6 +64,9 @@ Imagine you have : 1 databaseVM, 1 VM hosting a website (webVM) and you want to 
 Host-OnlyNetwork with the dataVM
 People from outside can’t corrupt your database, and you can examine the exchanges from your host computer.
 
+  # Conclusion : 
+Each problem/situation corresponds a solution : You can use differents kinds of networks to make your services reachable and secured (Internal Networks for VMs supposed to communicate between themselves only, Bridge to expose a VM to the internet, NAT for clientVMs, LocalHost to make host able to see the transfers)
+
   ## Sources
 - https://www.virtualbox.org/manual/ch06.html
 - https://www.thomas-krenn.com/en/wiki/Network_Configuration_in_VirtualBox
