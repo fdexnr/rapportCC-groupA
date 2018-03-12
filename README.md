@@ -45,5 +45,9 @@ Here is a global view of the different VirtualBox networks
 
 ![alt text](https://en.wikipedia.org/wiki/Lenna#/media/File:Lenna.png)
 
+<p>
+  <img src="https://en.wikipedia.org/wiki/Lenna#/media/File:Lenna.png" width="350"/>
+</p>
+
   ## Sources
 - https://www.thomas-krenn.com/en/wiki/Network_Configuration_in_VirtualBox
