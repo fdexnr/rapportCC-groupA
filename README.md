@@ -15,6 +15,13 @@ This configuration is the default one. The guest can access the external network
   ## NAT service variant:
 In the latest version of VirtualBox it is possible to configure the NAT network so that it can also communicate with other guess, given they are connected to the main guest. The guest stays unaccessible from external network. The VM is then similar to a router.
 
+  ## Principle:
+hhh  
+  
+  ## Uses:
+hhh
+
+
 # Bridged networking
 In this mode the guest can access the external network through the host and inversely. Obviously communication between the host and the guest is also possible.
 
