@@ -4,9 +4,9 @@
 
   # Principle :
 Thank's to a Specific Driver installed on the host PC, VirtualBox is "connected" to a network interface of this host computer (like eth0 of the physic machine). This enables VirtualBox to do two things:
-  -Intercept packets coming from the Internet. It checks the IP Addresses of the packets. If the IP Address matches : VirtualBox replaces the MAC address in the header of the IP packet with the VM's MAC address and then delivers the packet to the VM.
+1. Intercept packets coming from the Internet. It checks the IP Addresses of the packets. If the IP Address matches : VirtualBox replaces the MAC address in the header of the IP packet with the VM's MAC address and then delivers the packet to the VM.
 and redirect them to the VMs if the IP Address matches. 
-  -Inject Data : VirtualBox can write packets and send them through the interface chosen.
+2. Inject Data : VirtualBox can write packets and send them through the interface chosen.
 
   # Interfaces concerned : 
 Globally you can choose whether an Ethernet interface of a Wi-Fi interface. In the first case they are no problems, but with Wi-Fi : if the Host is a Macintosh or a Linux system, VirtualBox supports only IPv4 and IPv6 protocols, but not IPX.
