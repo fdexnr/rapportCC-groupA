@@ -58,7 +58,7 @@ This mode only allows communication between the host and guests.
 It’s a sort of merge of Bridge Network and Internal Network :
 VirtualBox creates on the host a new software interface which appears like any other network interface.
 It creates VM-to-VM communication. The difference with Internal Network is that the host can intercept exchanges and so on watch their communications.  
-  # Uses:
+  ## Uses:
 Imagine you have : 1 databaseVM, 1 VM hosting a website (webVM) and you want to have an overview of the exchanges from your host Machine. You create 2 networks :
  BridgeNetwork with the webVM
 Host-OnlyNetwork with the dataVM
